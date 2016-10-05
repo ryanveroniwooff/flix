@@ -47,3 +47,4 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem "figaro", ">= 1.0.0"
 gem "fog"
 gem 'mini_magick', '~> 4.3.1'
+gem 'carrierwave-aws'

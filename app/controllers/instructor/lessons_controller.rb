@@ -11,6 +11,10 @@ class Instructor::LessonsController < ApplicationController
     redirect_to instructor_course_path(current_section.course)
   end
 
+  def video
+    @video = video
+  end
+
   private
 
   def require_authorized_for_current_section
@@ -25,6 +29,6 @@ class Instructor::LessonsController < ApplicationController
   end
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle)
+    params.require(:lesson).permit(:title, :subtitle, :video)
   end
 end
