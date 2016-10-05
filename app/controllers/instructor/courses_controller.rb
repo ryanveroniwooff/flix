@@ -14,6 +14,9 @@ class Instructor::CoursesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+  def image
+    @image = image
+  end
 
   def show
   end
@@ -31,6 +34,6 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :cost)
+    params.require(:course).permit(:title, :description, :cost, :image)
   end
 end
