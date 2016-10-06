@@ -8,15 +8,15 @@
      <span class="label label-default">
       <%= number_to_currency current_course.cost %>
     </span>
-  <% if current_user && current_user == @course.user %>
+  <% if current_user && current_user == current_course.user %>
       <br />
       <br />
-      <%= link_to 'Admin', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+      <%= link_to 'Admin', instructor_course_path(current_course), class: 'btn btn-danger btn-large' %>
   <% end %>
 
     <br />
     <br />
-    <% if current_user && current_user.enrolled_in?(@course) %>
+    <% if current_user && current_user.enrolled_in?(current_course) %>
       <h3 class="label label-info">You Are Enrolled!</h3>
     <% else %>
       <%= link_to 'Enroll', course_enrollments_path(:id), class: 'btn btn-primary', method: :post %>
