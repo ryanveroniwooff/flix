@@ -9,6 +9,6 @@ class EnrollmentsController < ApplicationController
   private
  helper_method :current_course
   def current_course
-    @current_course ||= Course.find(params[:id])
+    @current_course ||= Course.find(params[:course_id])
   end
 end
