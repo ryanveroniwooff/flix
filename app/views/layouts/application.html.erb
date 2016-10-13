@@ -56,10 +56,39 @@
 <br class="clr" />
   <div id="footer">
     <div class="container">
-      <b>Teachers</b>
-      <br />
-      <%= link_to 'Teach a Course', new_instructor_course_path %>
-
+        <div class="col-xs-12 col-sm-3">
+        <b>Teachers</b>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Developer', 'http://ryanwooffwebdev.getforge.io' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        <a href="mailto:ryanwooffdeveloper@gmail.com" class="contact-link">
+                    ryanwooffdeveloper@gmail.com
+              </a>
+        <br />
+        Camarillo, CA.
+      </div>
+      <div class="col-xs-12 col-sm-3 social">
+        <b>Social</b>
+        <br />
+        <%= link_to 'http://github.com/ryanveroniwooff' do %>
+          <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'http://ryanwooffwebdev.getforge.io' do %>
+          <%= image_tag 'RWlogo.png', class: 'social-button' %>
+        <% end %>
+      </div>
     </div>
   </div>
 
